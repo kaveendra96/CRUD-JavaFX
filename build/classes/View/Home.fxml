@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="654.0" prefWidth="482.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+    <stylesheets>
+        <URL value="@/Css/home.css" />
+    </stylesheets>
+   <children>
+      <JFXTextField fx:id="txtName" layoutX="227.0" layoutY="94.0" />
+      <JFXTextField fx:id="txtAddress" layoutX="230.0" layoutY="138.0" />
+      <JFXTextField fx:id="txtCity" layoutX="227.0" layoutY="185.0" />
+      <JFXButton fx:id="btnAdd" layoutX="220.0" layoutY="245.0" onMouseClicked="#addPerson" text="Add" />
+      <JFXButton fx:id="btnUpdate" layoutX="284.0" layoutY="245.0" onMouseClicked="#updatePerson" text="update" />
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="318.0" prefHeight="300.0" prefWidth="424.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="124.0" text="Name" />
+          <TableColumn fx:id="colAddress" prefWidth="204.0" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="95.0" text="City" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnView" layoutX="378.0" layoutY="245.0" onMouseClicked="#viewPerson" text="View" />
+   </children>
+</AnchorPane>
